@@ -19,13 +19,21 @@ Dependencies
 
 See [meta/main.yml](meta/main.yml)
 
-Example Playbook
+Example Playbooks
 ----------------
 
 ```yml
-- hosts: servers
+- hosts: developer_desktop
   roles:
     - andrewrothstein.perforce
+```
+
+```yml
+- hosts: headless_servers
+  roles:
+    - role: andrewrothstein.perforce
+      vars:
+        perforce_p4v_install: false
 ```
 
 License
